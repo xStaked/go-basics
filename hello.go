@@ -18,7 +18,7 @@ func main() {
 
 	println(d)
 
-	var asd string = "asd"
+	var asd string = "asddd"
 
 	fmt.Println(c)
 
