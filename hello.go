@@ -20,8 +20,6 @@ func main() {
 
 	var asd string = "asddd"
 
-	fmt.Println(c)
-
 	fmt.Println(asd)
 	// fmt.Println(asd + strconv.Itoa(c))
 	fmt.Printf("%s %d\n", asd, c)
@@ -33,6 +31,18 @@ func main() {
 	// short hand declaration of variables
 	myString := "Hello, World!"
 	fmt.Println(myString)
+	// pi := 3.14159
+
+	// fmt.Printf("d: %s PI: %f", "asdasd", pi)
+
+	// var nombre string
+
+	// fmt.Print("Enter your name: ")
+	// fmt.Scanln(&nombre)
+	// fmt.Println("Hello", nombre)
+
+	// aritmetica()
+	// conditionals()
 
 	const myConst string = "Hello, World!"
 
@@ -80,12 +90,46 @@ func main() {
 		fmt.Println(i)
 	}
 
+	// Inrange loop
 	for index, value := range myMap {
 		fmt.Println(index, value)
 	}
 
+	condition := 0
+
+	// while loop
+	for condition <= 5 {
+		fmt.Println(condition)
+		condition++
+	}
+
+	// Is palindrome
+	// var word string
+	// fmt.Print("Enter a word: ")
+	// fmt.Scanln(&word)
+
+	// for i := 0; i < len(word)/2; i++ {
+	// 	if word[i] != word[len(word)-1-i] {
+	// 		fmt.Println("Not a palindrome")
+	// 		break
+	// 	}
+	// 	if i == len(word)/2-1 {
+	// 		fmt.Println("Is a palindrome")
+	// 	}
+	// }
+
+	// Slices
+	array2 := [3]int{5, 3, 32}
+	fmt.Println(array2)
+
+	var slice1 []string
+
+	slice1 = append(slice1, "Hello")
+
+	fmt.Println(slice1)
+
 	// Functions
-	fmt.Println(myFunction())
+	// fmt.Println(myFunction())
 
 	// Structs
 
@@ -101,4 +145,58 @@ func main() {
 
 func myFunction() string {
 	return "This is my function"
+}
+
+func aritmetica() {
+
+	var a, b int
+
+	fmt.Print("Enter a number: ")
+	fmt.Scanln(&a)
+
+	fmt.Print("Enter another number: ")
+	fmt.Scanln(&b)
+
+	sum := a + b
+	difference := a - b
+	product := a * b
+	quotient := a / b
+	modulus := a % b
+
+	fmt.Printf("Sum: %d\n", sum)
+	fmt.Printf("Difference: %d\n", difference)
+	fmt.Printf("Product: %d\n", product)
+	fmt.Printf("Quotient: %d\n", quotient)
+	fmt.Printf("Modulus: %d\n", modulus)
+
+	fmt.Println("Are they equal?", a == b)
+	fmt.Println("Are they not equal?", a != b)
+	fmt.Println("Is a greater than b?", a > b)
+	fmt.Println("Is a less than b?", a < b)
+	fmt.Println("Is a greater than or equal to b?", a >= b)
+	fmt.Println("Is a less than or equal to b?", a <= b)
+}
+
+func conditionals() {
+
+	var (
+		n      int
+		output string
+	)
+
+	fmt.Print("Enter a number: ")
+	fmt.Scanln(&n)
+
+	switch n {
+	case 1:
+		output = "One"
+	case 2:
+		output = "Two"
+	case 3:
+		output = "Three"
+	default:
+		output = "Not 1, 2, or 3"
+	}
+
+	fmt.Println(output)
 }
