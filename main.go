@@ -4,6 +4,7 @@ import (
 	"container/list"
 	"fmt"
 	"reflect"
+	"strings"
 )
 
 func main() {
@@ -118,6 +119,20 @@ func main() {
 	// 	}
 	// }
 
+	// func isPalindrome(text string) {
+	// 	var textReverse string
+	// 	for i := len(text) - 1; i >= 0; i-- {
+	// 		textReverse += string(text[i])
+	// 	}
+
+	// 	if text == textReverse {
+	// 		fmt.Println("Es palindromo")
+	// 	} else {
+	// 		fmt.Println("No es palindromo")
+	// 	}
+
+	// }
+
 	// Slices
 	array2 := [3]int{5, 3, 32}
 	fmt.Println(array2)
@@ -141,6 +156,23 @@ func main() {
 	myStruct := MyStruct{name: "John", age: 25}
 	fmt.Println(myStruct)
 
+	// isPalindrome()
+
+	// Multiple return values
+	// text, number := data()
+
+	// fmt.Println(text, number)
+
+	text := "Hello golang"
+	fmt.Println(strings.Replace(text, "golang", "GO", 1))
+	fmt.Println(strings.Split(strings.Join(strings.Split(text, " "), "-"), "-"))
+
+	// Pointers
+	var number int = 5
+	var pointer *int = &number
+
+	fmt.Println(number)
+	fmt.Println(pointer)
 }
 
 func myFunction() string {
@@ -199,4 +231,24 @@ func conditionals() {
 	}
 
 	fmt.Println(output)
+}
+
+func isPalindrome() {
+	var word string
+	fmt.Print("Enter a word: ")
+	fmt.Scanln(&word)
+	var textReverse string
+	for i := len(word) - 1; i >= 0; i-- {
+		textReverse += string(word[i])
+	}
+
+	if word == textReverse {
+		fmt.Println("Is a palindrome")
+	} else {
+		fmt.Println("Is not a palindrome")
+	}
+}
+
+func data() (string, int) {
+	return "Hello", 5
 }
