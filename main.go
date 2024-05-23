@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+
+	"github.com/xstaked/go-basics/message"
 )
 
 func main() {
@@ -173,6 +175,10 @@ func main() {
 
 	fmt.Println(number)
 	fmt.Println(pointer)
+
+	message.PublicFunc()
+	message.AnotherFunc()
+
 }
 
 func myFunction() string {
